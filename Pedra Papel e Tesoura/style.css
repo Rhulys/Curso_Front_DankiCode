@@ -1,0 +1,29 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+header{
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+header h2{
+    color: rgb(25, 148, 219);
+    font-size: 18px;
+}
+.align{
+    display: flex;
+    text-align: center;
+    margin: 50px 0;
+}
+.player-options, .enemy-options{
+    width: 50%;
+}
+.player-options img, .enemy-options img{
+    max-width: 200px;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: 1s;
+}
+footer{
+    border-top: 1px solid #ccc;
+    text-align: center;
+    padding-top: 20px;
+}

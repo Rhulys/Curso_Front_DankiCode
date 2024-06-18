@@ -1,0 +1,43 @@
+<html>
+    <body>
+
+        <style>
+            .tituloFilme{cursor: pointer;}
+            .description{display: none; margin-top: 10px;}
+        </style>
+
+        <div class="container">
+
+        </div> <!-- container-->
+
+        <script>
+            fetch('https://api.themoviedb.org/3/movie/popular?api_key=ef001da5e62a5f1028df29a355e64537&language=en-US&page=1', {
+                method: 'GET'
+            }).then(response => response.json()).then(function(json){
+                var container = document.querySelector('.container');
+
+                json.results.map(function(val){
+                    container.innerHTML+=`
+                        <div class="tituloFilme">`+val.original_title+`
+                        <div class="description">`+val.overview+`</div>
+                        <hr>
+                        </div>
+                `})
+
+                var titulos = document.querySelectorAll('.tituloFilme');
+                for(var i = 0; i < titulos.length; i++){
+                    titulos[i].addEventListener('click',(t) => {
+                        if(t.target.querySelector('.description').style.display == "none"){
+                            t.target.querySelector('.description').style.display = "block";
+                        }else{
+                            t.target.querySelector('.description').style.display = "none";
+                        }
+                        
+                    })
+                }
+
+            })
+
+        </script>
+    </body>
+</html>

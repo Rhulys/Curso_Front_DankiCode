@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Video chat</title>
+</head>
+<body>
+    
+    <div class="welcome">
+        <h2>Bem vindo ao nosso Chat em tempo real!</h2>
+    </div> <!-- welcome -->
+
+    <video id="localVideo" autoplay muted></video>
+    <video id="remoteVideo" autoplay muted></video>
+
+
+    <script>
+        if(!location.hash){
+            location.hash = Math.floor(Math.random() * 0xFFFFFF).toString(16);
+        }
+
+        const roomHash = location.hash.substring(1);
+
+        const drone = new ScaleDrone('yiS12Ts5RdNhebyM');
+
+        const roomName = 'observable-'+roomHash;
+
+        const configuration = {
+            iceServers:[
+                {
+                    urls: 'stun:stun.l.google.com:19302'
+                }
+            ]
+        }
+
+        let room;
+        let pc;
+
+        let number = 0;
+
+        function onSuccess(){};
+
+        function onError(error){
+            console.log(error);
+        };
+
+        drone.on('open', error => {
+            if(error)
+                return console.log(error);
+
+                room = drone.subscribe(roomName);
+
+            room.on('open', error => {
+
+            });
+
+            room.on('members', members=>{
+                number = members.length - 1;
+                const isOfferer = members.length >= 2;
+
+                startWebRTC(isOfferer);
+            })
+        });
+
+        function sendMessage(message){
+            drone.publish({
+                room: roomName,
+                message
+            })
+        }
+
+        function startWebRTC(isOfferer){
+            pc = new RTCPeerConnection(configuration);
+
+            pc.onicecandidate = event =>{
+                if(event.candidate){
+                    sendMessage({'candidate':event.candidate});
+                }
+            };
+
+            if(isOfferer){
+                pc.onnegotiationneeded = () =>{
+                    pc.createOffer().then(localDescCreated).catch();
+                }
+            }
+
+            pc.ontrack = event =>{
+                const stream = event.streams[0];
+
+                if(!remoteVideo.srcObject || remoteVideo.srcObject.id !== stream.id){
+                    remoteVideo.srcObject = stream;
+                }
+            }
+
+            navigator.mediaDevices.getUserMedia({
+                audio: true,
+                video: true,
+            }).then(stream => {
+                localVideo.srcObject = stream;
+                stream.getTracks().forEach(track=>pc.addTrack(track,stream))
+            })
+
+            room.on('member_leave',function(member){
+                remoteVideo.style.display = "none";
+            })
+
+            room.on('data',(message, client)=>{
+                if(client.id === drone.clientId){
+                    return;
+                }
+
+                if(message.sdp){
+                    pc.setRemoteDescription(new RTCSessionDescription(message.sdp), () => {
+                        if(pc.remoteDescription.type === 'offer'){
+                            pc.createAnswer().then(localDescCreated).catch(onError);
+                        }
+                    })
+                }else if(message.candidate){
+                    pc.addIceCandidate(
+                        new RTCIceCandidate(message.candidate), onSuccess, onError
+                    )
+                }
+            })
+        }
+
+        function localDescCreated(desc){
+            pc.setLocalDescription(
+                desc, () => sendMessage({'sdp': pc.localDescription})
+            );
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww38200\viewh21600\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /*\
+    -- Estrutura B\'e1sica --\
+\
+    <script> : Define um bloco de c\'f3digo JavaScript dentro de um documento HTML.\
+\
+    -- Tipos de Dados Primitivos --\
+\
+    String : Sequ\'eancia de caracteres.\
+    Number : Valores num\'e9ricos, tanto inteiros quanto de ponto flutuante.\
+    Boolean : Valores verdadeiros ou falsos (true, false).\
+    Undefined : Valor de uma vari\'e1vel que foi declarada mas n\'e3o inicializada.\
+    Null : Representa a aus\'eancia intencional de um valor.\
+\
+    -- Vari\'e1veis --\
+\
+    var : Declara uma vari\'e1vel (escopo global ou de fun\'e7\'e3o).\
+    let : Declara uma vari\'e1vel (escopo de bloco).\
+    const : Declara uma constante (escopo de bloco).\
+\
+    -- Operadores --\
+\
+    Aritm\'e9ticos : +, -, *, /, %, ++, --\
+    Atribui\'e7\'e3o : =, +=, -=, *=, /=, %=, **=\
+    Compara\'e7\'e3o : ==, ===, !=, !==, >, <, >=, <=\
+    L\'f3gicos : &&, ||, !\
+    Tern\'e1rio : ? :\
+\
+    -- Estruturas de Controle --\
+\
+    if (condi\'e7\'e3o) \{ ... \} : Executa um bloco de c\'f3digo se a condi\'e7\'e3o for verdadeira.\
+    else \{ ... \} : Executa um bloco de c\'f3digo se a condi\'e7\'e3o no if for falsa.\
+    else if (condi\'e7\'e3o) \{ ... \} : Testa uma nova condi\'e7\'e3o se a anterior for falsa.\
+    switch (express\'e3o) \{ case valor: ... break; ... default: ... \} : Executa um bloco de c\'f3digo com base no valor de uma express\'e3o.\
+\
+    -- Loops --\
+\
+    for (inicializa\'e7\'e3o; condi\'e7\'e3o; incremento) \{ ... \} : Executa um bloco de c\'f3digo um n\'famero espec\'edfico de vezes.\
+    while (condi\'e7\'e3o) \{ ... \} : Executa um bloco de c\'f3digo enquanto a condi\'e7\'e3o for verdadeira.\
+    do \{ ... \} while (condi\'e7\'e3o); : Executa um bloco de c\'f3digo pelo menos uma vez e depois continua enquanto a condi\'e7\'e3o for verdadeira.\
+    for (let vari\'e1vel in objeto) \{ ... \} : Itera sobre as propriedades de um objeto.\
+    for (let vari\'e1vel of iter\'e1vel) \{ ... \} : Itera sobre os valores de um objeto iter\'e1vel (arrays, strings, etc).\
+\
+    -- Fun\'e7\'f5es --\
+\
+    function nome( [param1[, param2[, ..., paramN]]]) \{ ... \} : Declara uma fun\'e7\'e3o.\
+    () => \{ ... \} : Declara uma fun\'e7\'e3o an\'f4nima de seta (arrow function).\
+    function nome(param1, param2) \{ return param1 + param2; \} : Fun\'e7\'e3o que retorna a soma de dois par\'e2metros.\
+\
+    -- Objetos --\
+\
+    let obj = \{ chave: valor, metodo: function() \{ ... \} \}; : Declara um objeto.\
+    obj.chave : Acessa a propriedade de um objeto.\
+    obj['chave'] : Acessa a propriedade de um objeto usando uma string.\
+    obj.metodo() : Chama um m\'e9todo de um objeto.\
+\
+    -- Arrays --\
+\
+    let arr = [item1, item2, ...]; : Declara um array.\
+    arr.length : Retorna o comprimento do array.\
+    arr.push(item) : Adiciona um item ao final do array.\
+    arr.pop() : Remove o \'faltimo item do array.\
+    arr.shift() : Remove o primeiro item do array.\
+    arr.unshift(item) : Adiciona um item ao in\'edcio do array.\
+    arr[index] : Acessa um item do array pelo \'edndice.\
+    arr.slice(in\'edcio, fim) : Retorna uma c\'f3pia rasa de uma parte do array.\
+    arr.splice(in\'edcio, deleteCount, item1, item2, ...) : Adiciona/remover itens de um array.\
+\
+    -- M\'e9todos Comuns de Array --\
+\
+    arr.forEach(function(item, index) \{ ... \}); : Executa uma fun\'e7\'e3o em cada item do array.\
+    arr.map(function(item, index) \{ ... \}); : Cria um novo array com os resultados da fun\'e7\'e3o aplicada em cada item.\
+    arr.filter(function(item, index) \{ ... \}); : Cria um novo array com todos os itens que passam no teste da fun\'e7\'e3o.\
+    arr.reduce(function(acumulador, item, index) \{ ... \}, valorInicial) : Aplica uma fun\'e7\'e3o a um acumulador e a cada item do array para reduzi-lo a um \'fanico valor.\
+    arr.find(function(item, index) \{ ... \}); : Retorna o primeiro item que passa no teste da fun\'e7\'e3o.\
+    arr.indexOf(item) : Retorna o primeiro \'edndice em que o item \'e9 encontrado no array.\
+\
+    -- Manipula\'e7\'e3o de DOM --\
+\
+    document.getElementById(id) : Retorna o elemento com o ID especificado.\
+    document.getElementsByClassName(nomeClasse) : Retorna todos os elementos com a classe especificada.\
+    document.getElementsByTagName(nomeTag) : Retorna todos os elementos com a tag especificada.\
+    document.querySelector(seletor) : Retorna o primeiro elemento que corresponde ao seletor CSS especificado.\
+    document.querySelectorAll(seletor) : Retorna todos os elementos que correspondem ao seletor CSS especificado.\
+    element.innerHTML : Define ou retorna o conte\'fado HTML de um elemento.\
+    element.textContent : Define ou retorna o conte\'fado de texto de um elemento.\
+    element.style.propriedadeCSS : Define ou retorna o valor de uma propriedade CSS.\
+\
+    -- Eventos --\
+\
+    element.addEventListener(tipo, fun\'e7\'e3o) : Anexa um manipulador de eventos a um elemento.\
+    element.removeEventListener(tipo, fun\'e7\'e3o) : Remove um manipulador de eventos de um elemento.\
+    onclick : Evento disparado quando um elemento \'e9 clicado.\
+    onmouseover : Evento disparado quando o ponteiro do mouse passa sobre um elemento.\
+    onmouseout : Evento disparado quando o ponteiro do mouse sai de um elemento.\
+    onkeydown : Evento disparado quando uma tecla \'e9 pressionada.\
+    onkeyup : Evento disparado quando uma tecla \'e9 solta.\
+\
+java\
+s    JSON.parse(string) : Converte uma string JSON em um objeto JavaScript.\
+    JSON.stringify(objeto) : Converte um objeto JavaScript em uma string JSON.\
+\
+    -- Boa Pr\'e1tica --\
+\
+    Sempre declare vari\'e1veis com `let` ou `const` para evitar polui\'e7\'e3o do escopo global.\
+    Use `===` ao inv\'e9s de `==` para evitar coer\'e7\'e3o de tipo inesperada.\
+    Prefira `addEventListener` para adicionar eventos ao inv\'e9s de atributos HTML como `onclick`.\
+\
+*/\
+}

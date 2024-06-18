@@ -1,0 +1,132 @@
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: "Open Sans", sans-serif;}
+.container{max-width: 1280px; margin: 0 auto; padding: 0 2%;}
+.clear{clear: both;}
+.w50{float: left; width: 50%;}
+.w33{float: left; width: 33.3%;}
+.center{text-align: center;}
+
+header{
+    padding: 8px 0;
+}
+.logo{
+    float: left;
+}
+.logo h2{
+    font-weight: normal;
+    font-size: 23px;
+}
+.menu-mobile{
+    display: none;
+    float: right;
+}
+.menu-mobile h2{
+    cursor: pointer;
+}
+.menu-mobile ul{
+    display: none;
+    width: 100%;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 999;
+    text-align: center;
+}
+.menu-mobile li{
+    padding: 8px 0;
+    border-bottom: 1px solid black;
+}
+.menu-mobile li.selected{
+    background: rgb(225, 225, 225);
+}
+.menu-mobile a{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.menu-desktop{
+    float: right;
+}
+.menu-desktop ul{
+    position: relative;
+    top: 8px;
+}
+.menu-desktop .selected{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.menu-desktop li{
+    display: inline-block;
+    padding: 0 10px;
+    font-weight: lighter;
+}
+.menu-desktop li a{
+    text-decoration: none;
+    color: black;
+}
+.menu-desktop a:hover{
+    text-decoration: underline;
+}
+
+.line-text{
+    display: inline-block;
+    color: #52aaa7;
+    position: relative;
+}
+.line-text > div{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 3px;
+    background-color: #52aaa7;
+    transition: 1s;
+}
+.line-text:hover div{
+    width: 100%;
+}
+.line-text h2{
+    font-weight: normal;
+    font-size: 27px;
+}
+
+
+footer.footer1{
+    background: #52aaa7;
+    padding: 20px 0;
+    color: white;
+}
+.footer1 h2{
+    font-weight: normal;
+    font-size: 23px;
+}
+.footer1 p{
+    margin-top: 8px;
+    font-weight: lighter;
+}
+.footer1 a{
+    margin-top: 8px;
+    display: block;
+    color: white;
+}
+.group-icons a{
+    font-size: 18px;
+    display: inline-block;
+    margin: 15px 10px;
+}
+
+footer.footer2{
+    color: white;
+    background: #237a70;
+    text-align: center;
+    padding: 15px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .w50, .w33{width: 100%; margin-bottom: 20px;}
+    .footer1{text-align: center;}
+}
+@media screen and (max-width: 500px) {
+    .menu-desktop{display: none;}
+    .menu-mobile{display: block;}
+}

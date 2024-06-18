@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de idade</title>
+</head>
+<body>
+    <script>
+        var anoAtual = prompt("Por favor informe o ano atual!")
+        var anoNascimento = prompt("Por favor informe o ano do seu nascimento!")
+
+        while(anoAtual < anoNascimento){
+            alert("Por favor digite os dados corretamente!")
+            var anoAtual = prompt("Por favor informe o ano atual!")
+            var anoNascimento = prompt("Por favor informe o ano do seu nascimento!")
+        }
+
+        var idadeFinal = anoAtual - anoNascimento;
+
+        console.log("Você tem "+ idadeFinal, "anos atualmente!");
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto Anotaçōes</title>
+</head>
+<body>
+    <div class="container-anotacoes">
+        
+    </div> <!-- container anotacoes-->
+    <div class="btn-add">+</div> <!-- btn add-->
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+    $(function(){
+        $('.btn-add').click(function(){
+            var el = '<div class="anotacao-single"><textarea placeholder="Sua nova anotaçāo..."></textarea></div>';
+            $('.container-anotacoes').append(el);
+
+            var textArea = $('.anotacao-single').last().find('textarea');
+         
+            var date = new Date();
+            var hh = date.getHours();
+            var mm= date.getMinutes();
+
+            var finalTime = hh+":"+mm;
+            textArea.html("Nova anotaçāo em " +finalTime);
+        })
+    })
+</script>
+</body>
+</html>

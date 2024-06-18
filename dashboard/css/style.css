@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+}
+html,body{
+    background-color: #FAF9FC;
+    height: 100%;
+}
+.clear{clear: both;}
+
+.sidebar{
+    background-color: #2D3035;
+    height: 100%;
+    width: 300PX;
+    float: left;
+}
+.topo{
+    background-color: #26282D;
+    text-align: center;
+    padding: 20px;
+}
+.topo h3{
+    color: white;
+}
+.menu{
+    padding: 30px;
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu ul li{
+    font-size: 18px;
+    color: #717171;
+    margin-bottom: 20px ;
+}
+.menu ul li a{
+    font-size: 18px;
+    color: #717171;
+    text-decoration: none;
+}
+.menu li:hover i{
+    transition: 0.5s;
+    color: #6D3BB8;
+}
+.menu li:hover a{
+    transition: 0.5s;
+    color: white;
+}
+
+.main-content{
+    float: left;
+    width: calc(100% - 300px);
+    height: 100%;
+}
+header{
+    height: 90px;
+    background: white;
+    padding: 20px 15px;
+    border-bottom: 2px solid #ccc;
+}
+.pesquisa-campo{
+    float: right;
+}
+.icone-pesquisa{
+    background: #D6D6D6;
+    padding: 7px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+.icone-pesquisa i{
+    position: relative;
+}
+.pesquisa-campo form{
+    display: inline-block;
+}
+.pesquisa-campo input{
+    outline: 0;
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    padding-left: 10px;
+    border-left: 0;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.icone-alerta{
+    float: right;
+    margin-right: 28px;
+    width: 30px;
+    height: 30px;
+    background: #FBEDEF;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+.icone-alerta p{
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    display: inline-block;
+    background: #ED7387;
+    color: white;
+    padding: 3px;
+    font-size: 12px;
+}
+.icone-alerta i{
+    font-size: 18px;
+    line-height: 30px;
+    color: #ED7387;
+    font-weight: bold;
+}
+.nome-usuario{
+    float: left;
+}
+.nome-usuario h2{
+    font-weight: normal;
+    font-size: 23px;
+    color: #A7A7A7;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.content-1{
+    float: left;
+    width: 70%;
+    padding: 30px;
+    overflow-y: auto;
+    height: calc(100% - 90px);
+}
+.panel{
+    padding: 30px;
+    width: 100%;
+    float: left;
+    background: white;
+    border: 2px solid #EBEBEB;
+}
+.panel h2{
+    color: #7F7F7F;
+    font-weight: normal;
+    font-size: 24px;
+}
+.panel p{
+    font-size: 17px;
+    color: #B2B2B2;
+    margin-top: 10px;
+}
+
+.ultimas-atividades{
+    width: 30%;
+    background: hsl(180, 2%, 92%);
+    padding: 20px 40px;
+    float: left;
+    height: calc(100% - 90px);
+    overflow-y: auto;
+    text-align: center;
+}
+.atividades-topo h2{
+    color: #7F7F7F;
+    font-size: 23px;
+    border-bottom: 1px solid #ccc;
+    font-weight: normal;
+    padding: 15px;
+}
+.atividade-registro{
+    text-align: left;
+    padding: 15px 30px;
+    border-left: 1px solid #bbb;
+    position: relative;
+}
+.circle-atividade{
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    background: hsl(180, 2%, 92%);
+}
+.atividade-registro h2{
+    color: #bbb;
+    font-size: 19px;
+    font-weight: normal;
+    padding: 10px 0;
+}
+.atividade-registro h3{
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.atividade-registro p{
+    color:  #B2B2B2;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .main-content{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .ultimas-atividades{display: none;}
+    .content-1{width: 100%;}
+    .sidebar{
+        display: none;
+        position: relative;
+        z-index: 999;
+    }
+}

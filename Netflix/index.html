@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f0fc425aa7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Projeto Netflix</title>
+</head>
+<body>
+    <header>
+        <div class="center">
+            <div class="header-left">
+                <a href=""><img src="./images/logo_netflix.png"></a>
+                <div class="menu-header">
+                    <nav>
+                        <ul>
+                            <li><a href="">Início</a></li>
+                            <li><a href="">Séries</a></li>
+                            <li><a href="">Filmes</a></li>
+                            <li><a href="">Adicionados Recentemente</a></li>
+                            <li><a href="">Minha Lista</a></li>
+                        </ul>
+                    </nav>
+                </div> <!-- menu header-->
+            </div> <!-- header left-->
+
+            <div class="header-right">
+                <div class="search">
+                    <i class="fas fa-search"></i>
+                </div> <!-- search-->
+                <a href="">INFANTIL</a>
+                <i class="fa-regular fa-gift"></i>
+                <div class="notifications">
+                    <div class="circle-notification">
+                        <span>10</span>
+                    </div> <!-- circle notification-->
+                    <i class="fa-solid fa-bell"></i>
+                </div> <!-- notifications-->
+            </div> <!-- header right-->
+
+            <div class="clear"></div>
+        </div> <!-- center-->
+    </header>
+
+    <section class="destaque">
+
+        <video src="./images/arrow.mp4" autoplay muted loop class="video-destaque"></video>
+
+        <div class="overlay"></div>
+        <div class="texto-destaque">
+            <h2>Lorem Ipsum</h2>
+            <h3>Assista a 3 temporada completa agora!</h3>
+            <p>Aqui vai a descriçāo da minha série ou filme.</p>
+            <br>
+            <a href=""><i class="fa-solid fa-play"></i> Assistir</a>
+            <a href=""><i class="fa-solid fa-plus"></i> Minha Lista</a>
+            <a href=""><i class="fa-solid fa-circle-info"></i> Mais Informações</a>
+        </div> <!-- texto destaque-->
+    </section> <!-- destaque -->
+
+    <section class="vitrine">
+        <div class="vitrine-flex">
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(./images/arrow.jpg);"></div>
+            </div> <!-- vitrine single banner-->
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(./images/suits.jpeg);"></div>
+            </div> <!-- vitrine single banner-->
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(./images/arrow.jpg);"></div>
+            </div> <!-- vitrine single banner-->
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(./images/suits.jpeg);"></div>
+            </div> <!-- vitrine single banner-->
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(./images/arrow.jpg);"></div>
+            </div> <!-- vitrine single banner-->
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(./images/suits.jpeg);"></div>
+            </div> <!-- vitrine single banner-->
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(./images/arrow.jpg);"></div>
+            </div> <!-- vitrine single banner-->
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(./images/suits.jpeg);"></div>
+            </div> <!-- vitrine single banner-->
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(./images/arrow.jpg);"></div>
+            </div> <!-- vitrine single banner-->
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(./images/suits.jpeg);"></div>
+            </div> <!-- vitrine single banner-->
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(./images/arrow.jpg);"></div>
+            </div> <!-- vitrine single banner-->
+            <div class="vitrine-single-banner">
+                <div class="vitrine-wraper" style="background-image: url(./images/suits.jpeg);"></div>
+            </div> <!-- vitrine single banner-->
+            
+        </div> <!-- vitrine flex-->
+    </section> <!-- vitrine-->
+    
+</body>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/slick.min.js"></script>
+<script>
+    $('.vitrine-flex').slick({
+        dots: false,
+        arrows: false,
+        Infinite: false,
+        centerMode: false,
+        speed: 1000,
+        slidesToShow: 6,
+        autoplay: true,
+        autoplayspeed: 3000,
+        pauseOnHover: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3
+                }
+            }
+        ]
+
+    });
+
+    $('.vitrine-wraper').hover(function(){
+        $(this).css('z-index','1000');
+    })
+    $('.vitrine-wraper').mouseout(function(){
+        $(this).css('z-index','0');
+    })
+</script>
+
+</html>

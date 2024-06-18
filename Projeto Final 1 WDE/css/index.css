@@ -1,0 +1,154 @@
+section.main-bg{
+    position: relative;
+    width: 100%;
+    padding: 140px 0;
+    background: url(../images/bg1.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+section.main-bg > .container{
+    position: relative;
+    z-index: 2;
+}
+.overlay{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.main-bg h2{
+    color: #52aaa7;
+    font-size: 40px;
+    font-weight: normal;
+}
+.main-bg p{
+    color: white;
+    font-size: 17px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+section.diferenciais{
+    padding: 30px 0;
+    text-align: center;
+}
+.icones-diferenciais{
+    margin-top: 35px;
+}
+.box-icone-single{
+    float: left;
+    width: 33.3%;
+    padding: 20px;
+}
+.box-icone-single h2{
+    color: #8a6b62;
+    font-size: 40px;
+}
+.box-icone-single p{
+    color: #646464;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+section.sobre-equipe{
+    padding: 30px 0;
+    background: rgb(225, 225, 225);
+}
+.sobre-equipe > .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.equipe-container, .sobre-container{
+    width: 50%;
+}
+.sobre-container p{
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.avatar-box{
+    margin-top: 15px;
+}
+.img-avatar{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-size: 100% 100%;
+    background-color: black;
+}
+.descricao-avatar {
+    position: relative;
+    top: -15px;
+    display: inline-block;
+    width: calc(100% - 70px);
+    padding: 0 10px;
+}
+.descricao-avatar h3{
+    color: rgb(30, 30, 30);
+    font-weight: normal;
+    font-style: italic;
+}
+.descricao-avatar p{
+    color: rgb(30, 30, 30);
+    font-weight: lighter;
+}
+
+section.inscricao{
+    background-color: #52aaa7;
+    padding: 10px 0;
+}
+.inscricao-texto{
+    color: white;
+    font-weight: normal;
+}
+.inscricao-form input[type=text]{
+    width: calc(100% - 125px);
+    height: 40px;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: inline-block;
+    outline: none;
+    padding-left: 10px;
+}
+.inscricao-form input[type=submit]{
+    width: 120px;
+    height: 40px;
+    background-color: #1d6c64;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    color: white;
+}
+
+section.cards{
+    padding: 30px 0;
+}
+.card-single{
+    padding: 20px;
+}
+.card-single img{
+    width: 100%;
+}
+.card-single h3{
+    font-weight: normal;
+    font-size: 19px;
+    margin-top: 5px;
+}
+.card-single p{
+    margin: 10px 0;
+    font-weight: lighter;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .box-icone-single{width: 100%; margin-bottom: 20px;}
+    .equipe-container, .sobre-container{width: 100%;}
+    .sobre-container{margin-top: 60px;}
+}
