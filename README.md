@@ -27,6 +27,42 @@ Este repositório contém uma coleção de projetos que desenvolvi durante o cur
 6. **Lista de supermercado**
    - Projeto de lista de supermercado!
    - HTML, CSS, JS
+     
+7. **Lista de Filme**
+   - Projeto lista filmes com base na API e mostra a descrição do mesmo!
+   - HTML, JS, API
+  
+8. **Netflix**
+   - Projeto clone da Netflix, utilizando um video como BG e carrosel de filmes!
+   - HTML, CSS, JS(jQuery)
+  
+9. **Pedra, Papel e Tesoura**
+   - Projeto do jogo Pedra, Papel e Tesoura, com sistema de vencedor!
+   - HTML, CSS, JS
+  
+10. **Perguntas e Resposta**
+   - Projeto para sistema de perguntas e responsa, onde mostrar a resposta correta após sua escolha!
+   - HTML, JS
+  
+11. **Pokedex**
+   - Projeto Pokedex onde lista os pokemons com base na quantidade digitada buscando na API!
+   - HTML, CSS, JS, API
+  
+12. **Projeto Final 1 WDE**
+   - Site feito na conclusão do curso!
+   - HTML, CSS, JS
+  
+13. **Projeto Final 2 WDE**
+   - Landing page feita na conclusão do curso!
+   - HTML, CSS, JS
+  
+14. **Projeto Final 2.0**
+   - Landing page feita na conclusão do curso!
+   - HTML, CSS, JS
+  
+14. **Projeto 01**
+   - Primeiro projeto feito no Curso de Front-End!
+   - HTML, CSS
   
 ...continua
 
