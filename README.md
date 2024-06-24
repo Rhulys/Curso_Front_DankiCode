@@ -6,7 +6,7 @@ Este repositório contém uma coleção de projetos que desenvolvi durante o cur
 1. **Amazon Prime**
    - Projeto clone da Amazon prime Videos!
    - HTML, CSS, JS e API
-   - [Link para o projeto] (https://www.linkedin.com/feed/update/urn:li:activity:7211009909822230528/)
+   - [Link para o projeto](https://www.linkedin.com/feed/update/urn:li:activity:7211009909822230528/)
      
 2. **Anotações**
    - Projeto de lista de anotações!
