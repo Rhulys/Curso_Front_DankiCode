@@ -30,13 +30,83 @@ Este repositório contém uma coleção de projetos que desenvolvi durante o cur
    - Tecnologias utilizadas: HTML, CSS, JavaScript
      
 7. **Lista de Filme**
-   - Projeto lista de filme.
+   - Projeto lista filmes de acordo com a API.
    - Tecnologias utilizadas: HTML, CSS, JavaScript, API
      
 8. **Netflix**
-   - Projeto clone da Amazon Prime Video.
+   - Projeto clone da Netflix.
    - Tecnologias utilizadas: HTML, CSS, JavaScript(jQuery)
    - [Link para o projeto](https://www.linkedin.com/feed/update/urn:li:activity:7211370160375398400/)
+     
+9. **Pedra Papel e Tesoura**
+   - Projeto Pedra papel e tesoura com inteligencia artificial simples.
+   - Tecnologias utilizadas: HTML, CSS, JavaScript(jQuery)
+   - [Link para o projeto](https://www.linkedin.com/feed/update/urn:li:activity:7211742621507956736/)
+     
+10. **Perguntas e Respostas**
+   - Projeto de perguntas que ao selecionar sua resposta, ele marca a resposta certa para você.
+   - Tecnologias utilizadas: HTML, JavaScript
+     
+11. **Pokedex**
+   - Projeto lista pokemons de acordo com a quantidade digitada pelo usuário.
+   - Tecnologias utilizadas: HTML, CSS, JavaScript, API
+   - [Link para o projeto](https://www.linkedin.com/feed/update/urn:li:activity:7212070396945203200/)
+     
+12. **Projeto Final 1 WDE **
+   - Site feito como projeto final do curso Web Design Express.
+   - Tecnologias utilizadas: HTML, CSS, JavaScript(jQuery), Font Awesome
+     
+13. **Projeto Final 2 WDE **
+   - Site feito como projeto final do curso Web Design Express.
+   - Tecnologias utilizadas: HTML, CSS
+     
+14. **Projeto Final 2.0 **
+   - Site feito como projeto final do curso Front End Completo 2.0.
+   - Tecnologias utilizadas: HTML, CSS, JavaScript(jQuery), Font Awesome
+     
+15. **Projeto 01 **
+   - Site feito como projeto do curso Front End Completo.
+   - Tecnologias utilizadas: HTML, CSS
+     
+16. **Projeto 02 **
+   - Site feito como projeto do curso Front End Completo.
+   - Tecnologias utilizadas: HTML, CSS
+     
+17. **Projeto 03 **
+   - Site feito como projeto do curso Front End Completo.
+   - Tecnologias utilizadas: HTML, CSS, JavaScript(jQuery)
+     
+18. **Projeto 04 **
+   - Site feito como projeto do curso Front End Completo.
+   - Tecnologias utilizadas: HTML, CSS, JavaScript(jQuery)
+     
+19. **Projeto 05 **
+   - Site feito como projeto do curso Front End Completo.
+   - Tecnologias utilizadas: HTML, CSS, JavaScript(jQuery)
+     
+20. **Projeto 06 **
+   - Site feito como projeto do curso Front End Completo.
+   - Tecnologias utilizadas: HTML, CSS, JavaScript(jQuery), Font Awesome
+     
+21. **Projeto 07 **
+   - Site feito como projeto do curso Front End Completo.
+   - Tecnologias utilizadas: HTML, CSS, Materialize
+     
+22. **Projeto 08 **
+   - Site feito como projeto do curso Front End Completo.
+   - Tecnologias utilizadas: HTML, CSS, Bootstrap
+     
+23. **Projeto 09 **
+   - Site feito como projeto do curso Front End Completo.
+   - Tecnologias utilizadas: HTML, CSS, JavaScript(jQuery), Font Awesome
+     
+24. **Projeto 10 **
+   - Site feito como projeto do curso Front End Completo.
+   - Tecnologias utilizadas: HTML, CSS, JavaScript(jQuery), Font Awesome
+     
+25. **Projeto 11 **
+   - Site feito como projeto do curso Front End Completo.
+   - Tecnologias utilizadas: HTML, CSS, Font Awesome
 
 ### Como Usar
 
